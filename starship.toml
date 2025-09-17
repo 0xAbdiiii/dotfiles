@@ -1,0 +1,44 @@
+format = '''
+$directory$git_branch$rust$python
+$character'''
+
+palette = 'colors'
+
+[palettes.colors]
+color1 = '#b5d086'
+color2 = '#233600'
+color3 = '#c5c8b9'
+color4 = '#1e2019'
+color5 = '#233600'
+color6 = '#12140e'
+color7 = '#12140e'
+color8 = '#b5d086'
+color9 = '#a0d0c9'
+
+# Prompt symbols
+[character]
+success_symbol = "[❯](color1 bold)"
+error_symbol = "[❯](@{error})"
+
+[directory]
+format = '(bold fg:color3)[$path]($style)(bold fg:color3)'
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+format = "(fg:color8 bg:color4)[ ](bg:color8 fg:color5)(fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)(fg:color4) "
+
+[time]
+format = "(fg:color8 bg:color4)[ ](bg:color8 fg:color5)(fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)(fg:color4) "
+disabled = false
+time_format = "%R" # Hour:Minute Format
+
+[python]
+format = "(fg:color8 bg:color4)[${symbol}${version}](bg:color8 fg:color5)(fg:color8 bg:color4)[(bg:color8 fg:color5)( ${virtualenv})](fg:color3 bg:color4)(fg:color4) "
+symbol = '🐍'
+pyenv_prefix = 'venv'
+pyenv_version_name = true

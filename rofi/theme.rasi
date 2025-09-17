@@ -1,0 +1,21 @@
+@import "colors.rasi"
+
+* {
+  font: "CaskaydiaCoveNerdFontMono Regular 12";
+  icon-theme: "Tela-circle-grey";
+
+  bg1     : @surface;
+  fg0     : @inverse-surface;
+  red     : @error;
+  blue    : @primary;
+
+  accent: @blue;
+  urgent: @red;
+
+  background-color : transparent;
+  text-color       : @fg0;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}

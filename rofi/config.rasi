@@ -1,0 +1,89 @@
+@theme "~/.config/rofi/theme.rasi"
+
+configuration {
+    modi:                        "drun,window,run";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-run:                 " ";
+    display-window:              " ";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    lazy-highlight: true;
+    disable-history: true;
+}
+
+window {
+  height:                      25em;
+  width:                       25em;
+  transparency:                "real";
+  fullscreen:                  false;
+  enabled:                     true;
+  cursor:                      "default";
+  spacing:                     0em;
+  padding:                     0em;
+  border:                      2px;
+  border-radius:               12px;
+  background-color:            @bg1;
+  border-color:                @accent;
+}
+
+inputbar {
+  enabled:                     true;
+  width:                       100%;
+  spacing:                     0em;
+  padding:                     8px;
+  background-color:            @bg1;
+  children :                   [ entry ];
+}
+
+scrollbar {
+    handle-color: @accent;
+    handle-width: 4px;
+}
+
+entry, element-icon, element-text {
+  vertical-align: 0.5;
+  placeholder: "Search applications...";
+}
+
+textbox {
+    text-color:                  @fg0;
+    background-color:            @fg0;
+}
+
+listview {
+  padding      : 4px 0px;
+  lines        : 12;
+  columns      : 1;
+  scrollbar    : true;
+  fixed-height : false;
+  dynamic      : true;
+}
+
+/* Combined and corrected element states */
+element {
+    padding: 4px 8px;
+    spacing: 8px;
+    background-color: @bg1;
+}
+
+/* Selected state */
+element selected {
+    text-color: @bg1;
+    background-color: @blue;
+    border-radius:    12em;
+}
+
+element-icon {
+   size: 2em;
+   horizontal-align: 0.5;
+   vertical-align: 0.5;
+}
+
+element-text {
+  text-color: inherit;
+}
+
+element-icon, element-text, element-selected {
+  cursor: pointer;
+}
