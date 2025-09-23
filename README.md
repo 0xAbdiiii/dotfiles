@@ -1,3 +1,19 @@
+## Installing Packages
+
+
+
+### Pacman
+```sh
+sudo pacman -Syu archlinux-xdg-menu ark bc brightnessctl btop cliphist dolphin evince fastfetch feh github-cli gnome-keyring grim hypridle hyprland hyprlock hyprpicker hyprpolkitagent imagemagick jq playerctl qt5ct qt6ct rofi satty sddm slurp starship tesseract udiskie ufw unzip uwsm vim vlc wl-clip-persist xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs
+```
+
+
+
+### Yay
+```sh
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && yay -Syu auto-cpufreq visual-studio-code-bin downgrade github-desktop-bin google-chrome hyprls-git localsend-bin matugen-bin noctalia-shell spotify wlogout
+```
+
 # Arch Linux Installation
 ```sh
 ------------------Live USB------------------
@@ -118,22 +134,4 @@ echo "options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/sda3) rw" ›› /
 • reboot and you're done!!
 
 --------------------Arch----------------------
-```
-
-
-
-## Installing Packages
-
-
-
-### Pacman
-```sh
-sudo pacman -Syu archlinux-xdg-menu ark bc brightnessctl btop cliphist dolphin evince fastfetch feh github-cli gnome-keyring grim hypridle hyprland hyprlock hyprpicker hyprpolkitagent imagemagick jq playerctl qt5ct qt6ct rofi satty sddm slurp starship tesseract udiskie ufw unzip uwsm vim vlc wl-clip-persist xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs
-```
-
-
-
-### Yay
-```sh
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && yay -Syu auto-cpufreq visual-studio-code-bin downgrade github-desktop-bin google-chrome hyprls-git localsend-bin matugen-bin noctalia-shell spotify wlogout
 ```
