@@ -104,9 +104,9 @@ OR
 • bootctl install
 • nano /boot/loader/entries/arch.conf
 
---  title           Arch                           --
---  linux         /vmlinuz-linux           --
---  initrd        /intel-ucode.img       --
+--  title           Arch                --
+--  linux         /vmlinuz-linux        --
+--  initrd        /intel-ucode.img      --
 --  initrd        /initramfs-linux.img  --
 
 echo "options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/sda3) rw" ›› /boot/loader/entries/arch.conf
@@ -130,7 +130,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 
 ```sh
-sudo pacman -Syu archlinux-xdg-menu ark bc brightnessctl btop cliphist dolphin evince fastfetch feh github-cli grim hypridle hyprland hyprlock hyprpicker hyprpolkitagent imagemagick jq playerctl qt5ct qt6ct rofi satty sddm slurp starship tesseract udiskie ufw unzip uwsm vim vlc wl-clip-persist xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs
+sudo pacman -Syu archlinux-xdg-menu ark bc brightnessctl btop cliphist dolphin evince fastfetch feh github-cli gnome-keyring grim hypridle hyprland hyprlock hyprpicker hyprpolkitagent imagemagick jq playerctl qt5ct qt6ct rofi satty sddm slurp starship tesseract udiskie ufw unzip uwsm vim vlc wl-clip-persist xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs
 ```
 
 
