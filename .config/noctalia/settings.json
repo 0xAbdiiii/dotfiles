@@ -5,6 +5,7 @@
         "pinnedExecs": [
         ],
         "position": "center",
+        "sortByMostUsed": true,
         "useApp2Unit": false
     },
     "audio": {
@@ -12,13 +13,11 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "showMiniplayerAlbumArt": false,
-        "showMiniplayerCava": false,
         "visualizerType": "linear",
+        "volumeOverdrive": false,
         "volumeStep": 1
     },
     "bar": {
-        "alwaysShowBatteryPercentage": false,
         "backgroundOpacity": 0,
         "density": "comfortable",
         "floating": false,
@@ -28,11 +27,7 @@
             "eDP-1"
         ],
         "position": "top",
-        "showActiveWindowIcon": true,
         "showCapsule": true,
-        "showNetworkStats": false,
-        "showWorkspaceLabel": "none",
-        "useDistroLogo": false,
         "widgets": {
             "center": [
             ],
@@ -48,12 +43,10 @@
                     "id": "Tray"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "displayMode": "onhover",
                     "id": "Brightness"
                 },
@@ -64,16 +57,16 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "alwaysShowPercentage": true,
                     "displayMode": "alwaysShow",
                     "id": "Battery",
                     "warningThreshold": 30
                 },
                 {
-                    "displayFormat": "time",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "reverseDayMonth": false,
-                    "use12HourClock": true
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
                 },
                 {
                     "hideWhenZero": true,
@@ -81,7 +74,9 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "id": "SidePanelToggle",
+                    "customIconPath": "",
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
                     "useDistroLogo": true
                 }
             ]
@@ -92,6 +87,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "matugenSchemeType": "scheme-fruit-salad",
         "predefinedScheme": "Catppuccin",
         "useWallpaperColors": true
     },
@@ -101,9 +97,12 @@
         "exclusive": false,
         "floatingRatio": 1,
         "monitors": [
+        ],
+        "pinnedApps": [
         ]
     },
     "general": {
+        "animationDisabled": false,
         "animationSpeed": 2,
         "avatarImage": "/home/nightwing/.face",
         "dimDesktop": false,
@@ -119,9 +118,8 @@
     },
     "location": {
         "name": "Sukkur",
-        "reverseDayMonth": false,
-        "showDateWithClock": false,
-        "use12HourClock": false,
+        "showWeekNumberInCalendar": false,
+        "use12hourFormat": true,
         "useFahrenheit": false
     },
     "matugen": {
@@ -138,7 +136,6 @@
         "vesktop": false
     },
     "network": {
-        "bluetoothEnabled": true,
         "wifiEnabled": true
     },
     "nightLight": {
@@ -151,14 +148,24 @@
         "nightTemp": "4000"
     },
     "notifications": {
+        "alwaysOnTop": false,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
-        "lastSeenTs": 1758134896000,
+        "lastSeenTs": 1758173755000,
+        "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
             "eDP-1"
         ],
-        "normalUrgencyDuration": 8
+        "normalUrgencyDuration": 8,
+        "respectExpireTimeout": false
+    },
+    "osd": {
+        "autoHideMs": 2000,
+        "enabled": true,
+        "location": "top_right",
+        "monitors": [
+        ]
     },
     "screenRecorder": {
         "audioCodec": "opus",
@@ -194,7 +201,7 @@
             {
                 "directory": "/home/nightwing/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/nightwing/Pictures/Wallpapers/game.jpg"
+                "wallpaper": "/home/nightwing/Pictures/Wallpapers/kill la kill.jpg"
             }
         ],
         "randomEnabled": false,
