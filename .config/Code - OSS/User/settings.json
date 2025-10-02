@@ -99,7 +99,7 @@
   "window.commandCenter": false,
   "window.menuBarVisibility": "toggle",
   "window.controlsStyle": "hidden",
-  "window.customTitleBarVisibility": "never"
+  "window.customTitleBarVisibility": "never",
 
   "custom-ui-style.stylesheet": {
     ".window-appicon": "visibility: hidden !important",
