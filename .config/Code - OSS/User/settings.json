@@ -20,7 +20,7 @@
   "workbench.editor.revealIfOpen": true,
 
   "window.title": " ",
-  "window.controlsStyle": "native",
+  "window.controlsStyle": "hidden",
   "window.titleBarStyle": "custom",
   "window.customTitleBarVisibility": "never",
   "window.menuBarVisibility": "toggle",
