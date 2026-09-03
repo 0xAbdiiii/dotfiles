@@ -319,11 +319,11 @@ PanelWindow {
         id: pickerModal
         anchors.top: parent.top
         anchors.right: parent.right
-        anchors.topMargin: 52
+        anchors.topMargin: 12
         anchors.rightMargin: 12
         width: 380
         height: Math.min(540, mainLayout.implicitHeight + 28)
-        radius: 20
+        radius: 14
         color: Qt.alpha(Colors.md3.surface_container_high, 0.95)
         border.color: Colors.md3.outline_variant
         border.width: 1
@@ -382,7 +382,7 @@ PanelWindow {
                     }
 
                     QsText {
-                        text: (globalNetworkDaemon && globalNetworkDaemon.btOn) 
+                        text: (globalNetworkDaemon && globalNetworkDaemon.btOn)
                             ? (window.connectedDevices.length > 0 ? `${window.connectedDevices.length} Connected` : "Bluetooth Enabled")
                             : "Bluetooth is Disabled"
                         font.pixelSize: 11

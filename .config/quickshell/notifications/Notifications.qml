@@ -12,7 +12,7 @@ PanelWindow {
     objectName: "notifications"
 
     anchors { top: true; right: true }
-    margins { top: 54; right: 12 }
+    margins { top: 12; right: 12 }
 
     property var activeNotifications: []
 
@@ -101,23 +101,23 @@ PanelWindow {
                 readonly property bool isLow: modelData.urgency === NotificationUrgency.Low
                 readonly property bool isNormal: !isCritical && !isLow
 
-                readonly property color accentColor: isCritical 
-                    ? Colors.md3.error 
+                readonly property color accentColor: isCritical
+                    ? Colors.md3.error
                     : (isLow ? Colors.md3.tertiary : Colors.md3.primary)
 
-                readonly property color containerColor: isCritical 
-                    ? Qt.alpha(Colors.md3.error_container, 0.45) 
+                readonly property color containerColor: isCritical
+                    ? Qt.alpha(Colors.md3.error_container, 0.45)
                     : (isLow ? Qt.alpha(Colors.md3.tertiary_container, 0.40) : Qt.alpha(Colors.md3.primary_container, 0.40))
 
-                readonly property color onContainerColor: isCritical 
-                    ? Colors.md3.on_error_container 
+                readonly property color onContainerColor: isCritical
+                    ? Colors.md3.on_error_container
                     : (isLow ? Colors.md3.on_tertiary_container : Colors.md3.on_primary_container)
 
                 // Auto-dismiss Timer: Critical notifications NEVER auto-dismiss.
                 Timer {
                     id: dismissTimer
-                    interval: (modelData.expireTimeout > 0) 
-                        ? modelData.expireTimeout 
+                    interval: (modelData.expireTimeout > 0)
+                        ? modelData.expireTimeout
                         : (modelData.urgency === NotificationUrgency.Low ? 4000 : 6000)
                     running: modelData.urgency !== NotificationUrgency.Critical && !notifArea.containsMouse
                     repeat: false
@@ -133,8 +133,8 @@ PanelWindow {
                     implicitHeight: cardContent.implicitHeight + 24
                     color: Qt.alpha(Colors.md3.surface_container, 0.88)
                     radius: 14
-                    border.color: isCritical 
-                        ? Colors.md3.error 
+                    border.color: isCritical
+                        ? Colors.md3.error
                         : (notifArea.containsMouse ? notifArea.accentColor : Qt.alpha(notifArea.accentColor, 0.40))
                     border.width: isCritical ? 1.5 : 1
                     clip: true
@@ -155,8 +155,8 @@ PanelWindow {
                             IconImage {
                                 Layout.preferredWidth: 16
                                 Layout.preferredHeight: 16
-                                source: modelData.appIcon 
-                                    ? modelData.appIcon 
+                                source: modelData.appIcon
+                                    ? modelData.appIcon
                                     : Quickshell.iconPath(modelData.appName || "dialog-information", "application-x-executable")
                             }
 
@@ -174,8 +174,8 @@ PanelWindow {
                                 implicitWidth: urgencyBadgeText.implicitWidth + 10
                                 implicitHeight: 16
                                 radius: 8
-                                color: notifArea.isCritical 
-                                    ? Colors.md3.error 
+                                color: notifArea.isCritical
+                                    ? Colors.md3.error
                                     : (notifArea.isLow ? Qt.alpha(Colors.md3.tertiary, 0.20) : Qt.alpha(Colors.md3.primary, 0.20))
                                 border.color: notifArea.isCritical ? Colors.md3.error : Qt.alpha(notifArea.accentColor, 0.50)
                                 border.width: 1
@@ -286,8 +286,8 @@ PanelWindow {
                                         text: modelData.actions[index].text
                                         font.pixelSize: 11
                                         font.bold: true
-                                        color: actionMouse.containsMouse 
-                                            ? (notifArea.isCritical ? Colors.md3.on_error : Colors.md3.on_primary) 
+                                        color: actionMouse.containsMouse
+                                            ? (notifArea.isCritical ? Colors.md3.on_error : Colors.md3.on_primary)
                                             : notifArea.onContainerColor
                                     }
                                 }

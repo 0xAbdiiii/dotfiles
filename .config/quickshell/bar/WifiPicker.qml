@@ -252,11 +252,11 @@ PanelWindow {
         id: pickerModal
         anchors.top: parent.top
         anchors.right: parent.right
-        anchors.topMargin: 52
+        anchors.topMargin: 12
         anchors.rightMargin: 12
         width: 380
         height: Math.min(540, mainLayout.implicitHeight + 28)
-        radius: 20
+        radius: 14
         color: Qt.alpha(Colors.md3.surface_container_high, 0.95)
         border.color: Colors.md3.outline_variant
         border.width: 1
@@ -315,7 +315,7 @@ PanelWindow {
                     }
 
                     QsText {
-                        text: (globalNetworkDaemon && globalNetworkDaemon.wifiOn) 
+                        text: (globalNetworkDaemon && globalNetworkDaemon.wifiOn)
                             ? (globalNetworkDaemon.currentSsid !== "Disconnected" ? globalNetworkDaemon.currentSsid : "Available Networks")
                             : "Wi-Fi is Disabled"
                         font.pixelSize: 11
@@ -455,11 +455,11 @@ PanelWindow {
                     width: netList.width
                     implicitHeight: isPasswordOpen ? (cardRow.implicitHeight + passwordBox.implicitHeight + 20) : (cardRow.implicitHeight + 14)
                     radius: 12
-                    color: modelData.isConnected 
-                        ? Qt.alpha(Colors.md3.primary_container, 0.45) 
+                    color: modelData.isConnected
+                        ? Qt.alpha(Colors.md3.primary_container, 0.45)
                         : (itemMouse.containsMouse ? Colors.md3.surface_container_highest : Colors.md3.surface_container)
-                    border.color: modelData.isConnected 
-                        ? Colors.md3.primary 
+                    border.color: modelData.isConnected
+                        ? Colors.md3.primary
                         : (itemMouse.containsMouse ? Colors.md3.outline : Qt.alpha(Colors.md3.outline_variant, 0.5))
                     border.width: modelData.isConnected ? 1.5 : 1
 
